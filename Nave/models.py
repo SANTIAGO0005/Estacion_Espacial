@@ -26,14 +26,15 @@ class Nave(models.Model):
     fabricante = models.CharField(max_length=50)
     categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
     anio_fabricacion = models.IntegerField()
-    numero_llantas = models.IntegerField()
+    peso = models.IntegerField()
     numero_motores = models.IntegerField()
     numero_tripulantes = models.IntegerField()
-    numero_tripulantes_max = models.IntegerField()
-    numero_tripulantes_min = models.IntegerField()
-    velocidad_maxima = models.IntegerField()
-    estado = models.BooleanField(default=True)
-    cantidadMinima = models.IntegerField()
+    potencia = models.IntegerField()
+    objetivo = models.CharField(max_length=50)
+    capacidad_carga = models.IntegerField()
+    activo = models.BooleanField(default=True)
+    combustible = models.CharField(max_length=50)
+
 
     class Meta:
         """Meta definition for Nave."""
@@ -43,7 +44,7 @@ class Nave(models.Model):
 
     def __str__(self):
         """Unicode representation of Nave."""
-        return'{}'.format(self.nombre, self.modelo, self.fabricante, self.categoria, self.anio_fabricacion, self.numero_llantas, self.numero_motores, self.cantidadMinima)
+        return'{}'.format(self.nombre, self.modelo, self.fabricante, self.categoria, self.anio_fabricacion, self.peso, self.numero_motores)
 
     
 class Inventario(models.Model):

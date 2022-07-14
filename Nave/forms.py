@@ -18,9 +18,13 @@ class CategoriaForm(forms.ModelForm):
 class NaveForm(forms.ModelForm):
        class Meta:
               model=Nave
-              fields=['nombre','modelo','fabricante','categoria','anio_fabricacion','numero_llantas','numero_motores','numero_tripulantes','numero_tripulantes_max','numero_tripulantes_min','velocidad_maxima','estado','cantidadMinima']
-              labels={'nombre':'Nombre','modelo':'Modelo','fabricante':'Fabricante','categoria':'Categoria','anio_fabricacion':'Año de Fabricacion','numero_llantas':'Numero de Llantas','numero_motores':'Numero de Motores','numero_tripulantes':'Numero de Tripulantes','numero_tripulantes_max':'Numero de Tripulantes Maximo','numero_tripulantes_min':'Numero de Tripulantes Minimo','velocidad_maxima':'Velocidad Maxima','estado':'Estado','cantidadMinima':'Cantidad Minima'}
-              widgets={'nombre':forms.TextInput(attrs={'class':'form-control'}),'modelo':forms.TextInput(attrs={'class':'form-control'}),'fabricante':forms.TextInput(attrs={'class':'form-control'}),'categoria':forms.Select(attrs={'class':'form-control'}),'anio_fabricacion':forms.NumberInput(attrs={'class':'form-control'}),'numero_llantas':forms.NumberInput(attrs={'class':'form-control'}),'numero_motores':forms.NumberInput(attrs={'class':'form-control'}),'numero_tripulantes':forms.NumberInput(attrs={'class':'form-control'}),'numero_tripulantes_max':forms.NumberInput(attrs={'class':'form-control'}),'numero_tripulantes_min':forms.NumberInput(attrs={'class':'form-control'}),'velocidad_maxima':forms.NumberInput(attrs={'class':'form-control'}),'estado':forms.CheckboxInput(attrs={'class':'form-control'}),'cantidadMinima':forms.NumberInput(attrs={'class':'form-control'})}
+              fields=['nombre','modelo','fabricante','categoria','anio_fabricacion', 'peso', 'numero_motores', 'numero_tripulantes',
+                      'potencia','objetivo','capacidad_carga',
+                      'activo','combustible']
+              labels={'nombre':'Nombre','modelo':'Modelo','fabricante':'Fabricante','categoria':'Categoria','anio_fabricacion':'Año de Fabricacion',
+                      'peso': 'Peso KG', 'numero_motores': 'Numero de Motores', 'numero_tripulantes': 'Numero de Tripulantes', 'potencia': 'Potencia', 'objetivo': 'Objetivo', 'capacidad_carga': 'Capacidad de carga T', 'activo': 'Activo','combustible':'Combustible' }
+              widgets={'nombre':forms.TextInput(attrs={'class':'form-control'}),'modelo':forms.TextInput(attrs={'class':'form-control'}),'fabricante':forms.TextInput(attrs={'class':'form-control'}),'categoria':forms.Select(attrs={'class':'form-control'}),'anio_fabricacion':forms.NumberInput(attrs={'class':'form-control'}),
+                       'peso':forms.NumberInput(attrs={'class': 'form-control'}), 'numero_motores':forms.NumberInput(attrs={'class': 'form-control'}), 'numero_tripulantes':forms.NumberInput(attrs={'class': 'form-control'}), 'potencia':forms.NumberInput(attrs={'class': 'form-control'}), 'objetivo':forms.TextInput(attrs={'class': 'form-control'}), 'capacidad_carga':forms.NumberInput(attrs={'class': 'form-control'}), 'activo':forms.CheckboxInput(attrs={'class': 'form-control'}), 'combustible':forms.TextInput(attrs={'class': 'form-control'})}
 
 class InventarioForm(forms.ModelForm):
       class Meta:
