@@ -9,7 +9,7 @@ class CategoriaAdmin(admin.ModelAdmin):
     list_filter=("descripcion",)
  
 class NaveAdmin(admin.ModelAdmin): 
-    naves=("nombre","modelo","fabricante","categoria","anio_fabricacion","peso","numero_motores","numero_tripulantes","potencia","numero_tripulantes_min","capacidad_carga","activo","cantidadMinima")
+    naves=("nombre","modelo","fabricante","categoria","anio_fabricacion","peso","numero_motores","numero_tripulantes","potencia","objetivo","capacidad_carga","activo",'combustible')
     list_display=naves
     search_fields=("nombre","modelo","fabricante")
     list_filter: naves

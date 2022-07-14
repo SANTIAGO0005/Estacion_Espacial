@@ -33,7 +33,7 @@ class Nave(models.Model):
     objetivo = models.CharField(max_length=50)
     capacidad_carga = models.IntegerField()
     activo = models.BooleanField(default=True)
-    combustible = models.CharField(max_length=50)
+    combustible = models.CharField(max_length=50,blank=True)
 
 
     class Meta:
