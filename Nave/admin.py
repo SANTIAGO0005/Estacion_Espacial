@@ -9,14 +9,14 @@ class CategoriaAdmin(admin.ModelAdmin):
     list_filter=("descripcion",)
  
 class NaveAdmin(admin.ModelAdmin): 
-    naves=("nombre","modelo","fabricante","categoria","anio_fabricacion","peso","numero_motores","numero_tripulantes","potencia","objetivo","capacidad_carga","activo",'combustible')
+    naves=("nombre","modelo","fabricante","categoria","anio_fabricacion","peso","numero_motores","numero_tripulantes","potencia","objetivo","capacidad_carga","activo","combustible")
     list_display=naves
     search_fields=("nombre","modelo","fabricante")
     list_filter: naves
 class InventarioAdmin(admin.ModelAdmin): 
     inventario=("nave","cantidad")
     list_display=inventario
-    search_fields=inventario
+    search_fields=("nave__nombre","nave__modelo","nave__fabricante")
     list_filter=inventario
 
 # Register your models here.
