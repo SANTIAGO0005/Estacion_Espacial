@@ -1,8 +1,5 @@
 # Estacion_Espacial
 Recto Técnico: Training League
-
-# Estacion Espacial
-
 Programa para inventario de naves espaciales.
 
 ## SANTIAGO CIFUENTES
