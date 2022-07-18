@@ -25,3 +25,9 @@ Ir  a la  carpeta  del proyecto  y ejecutar
 ```bash
  python manage.py runserver
 ```
+Para acceder al Login del Admin
+```bash
+ user: santiago
+ password: 12345
+```
+
